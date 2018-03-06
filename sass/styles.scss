@@ -12,11 +12,12 @@ html{
     font-family: 'Montserrat', sans-serif;
 }
 
+.centerTxt{text-align: center;}
 .title{color: $colorDark;}
 .colorTxt{color: $colorDark}
 .sideTitle{
-    position: absolute;
-    top: 0;
+    margin-top: -15px;
+    margin-left: -6px;
 }
 a.unStyle{
     text-decoration: none;
@@ -103,7 +104,7 @@ body {margin:0;}
         width: 15%;
         position: absolute;
         left: 3%;
-        top: 5%;
+        top: 30px;
     }
 
     .links{
@@ -156,6 +157,7 @@ body {margin:0;}
             width: 56%;            
             padding: 8px 0 0 20px;
             vertical-align: top;
+            font-style: italic;
         }
 
         
@@ -346,7 +348,8 @@ body {margin:0;}
 
         h4{
             margin: 0 0 15px 20px;
-            color: $colorPrimary
+            color: $colorPrimary;
+            text-align: center;
         }
     }
 
@@ -367,7 +370,9 @@ body {margin:0;}
         
 
             li{
-                padding: 2px
+                text-indent: calc(-1em - 5px);
+                padding: 2px;
+                padding-left: calc(1em + 5px) ;
             }
 
         }
@@ -379,13 +384,23 @@ body {margin:0;}
 }
 
 .clipPath{
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 60% 90%, 50% 100%, 40% 90%, 0 90%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), calc(50% + 5vw) calc(100% - 5vw), 50% 100%, calc(50% - 5vw) calc(100% - 5vw), 0 calc(100% - 5vw));
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), calc(50% + 5vw) calc(100% - 5vw), 50% 100%, calc(50% - 5vw) calc(100% - 5vw), 0 calc(100% - 5vw));
 }
 
 #process{
     position: relative;
     z-index: 15;
+
+    .header{
+        width: 100%;
+        background: #1E3E62;
+        color: white;
+        margin-bottom: -5vw;
+
+        h1{ margin: 0; padding: 15px 0; }
+    }
+
     .sideTitle{
         left: 3%;
     }
@@ -463,7 +478,7 @@ body {margin:0;}
 .implementation{
     margin-top: -5vw; 
 
-
+    
     .sideTitle{
         right: 3%;
     }
@@ -496,6 +511,10 @@ body {margin:0;}
     color: $colorDark;
 }
 
+.lSSlideOuter{
+    margin: 10px 0;
+}
+
 #clients{
     margin: 0 0 10px;
     height: 250px !important;
@@ -503,7 +522,6 @@ body {margin:0;}
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        margin: 0 10px;
     }
     img{
        max-height: 250px;
@@ -513,9 +531,20 @@ body {margin:0;}
 
 #contactUs{
     background: $colorDark;
+    padding: 15px 30px;
+    color: white;
+
     h1{
-        padding: 15px;
-        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    > p{
+        padding: 2px;
+    }
+
+    li{
+        padding: 2px;
     }
 
     .form{
@@ -624,7 +653,7 @@ body {margin:0;}
   
   
     &.up{
-      border-top: 5vw solid white;
+      border-top: 5vw solid #1E3E62;
       top: 5vw;
       margin-top: -5vw;
     }

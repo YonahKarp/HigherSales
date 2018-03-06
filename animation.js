@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 
     //slideshow
-    var blurInterval = setInterval(runBlurAnimation, 6000);
+    var blurInterval = setInterval(runBlurAnimation, 8000);
       var index = 1;
       var flag = true;
       var blur1 = $("#blur1");
@@ -35,7 +35,7 @@ $(document).ready(function(){
         index = $(this).index();
         clearInterval(blurInterval);
         runBlurAnimation();
-        blurInterval = setInterval(runBlurAnimation, 6000);
+        blurInterval = setInterval(runBlurAnimation, 8000);
     });
 
     //collapsed links
@@ -69,7 +69,7 @@ $(document).ready(function(){
         item: 3,
         autoWidth: true,
         slideMove: 1, // slidemove will be 1 if loop is true
-        slideMargin: 40,
+        slideMargin: 60,
  
         addClass: '',
         mode: "slide",
@@ -81,7 +81,7 @@ $(document).ready(function(){
         auto: true,
         loop: true,
         slideEndAnimation: false,
-        pause: 2000,
+        pause: 3000,
  
         pager: true,
         currentPagerPosition: 'middle',
