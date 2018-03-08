@@ -105,6 +105,8 @@ body {margin:0;}
         position: absolute;
         left: 3%;
         top: 30px;
+        background: white;
+        border-radius: 20%;
     }
 
     .links{
@@ -134,6 +136,7 @@ body {margin:0;}
         min-height: 220px;
         margin: 13% auto 0;
         display: none;
+        text-align: center;
         opacity: 0;
 
         &.active{
@@ -143,9 +146,9 @@ body {margin:0;}
             -webkit-animation: fadeIn 1s ease-in-out;
         }
 
-
         > div{
             display: inline-block;
+            text-align: left;
         }
 
         // .tagLine{
@@ -254,6 +257,7 @@ body {margin:0;}
 
         .slideContent{
             min-height: 400px;
+            text-align: unset;
             .question{
                 width: 94%;
             }
@@ -357,9 +361,9 @@ body {margin:0;}
 
     .servicesList{
         margin-left: 20px;
-        -moz-column-width: 14em; /* Firefox */
-        -webkit-column-width: 14em; /* webkit, Safari, Chrome */
-        column-width: 14em;
+        -moz-column-width: 24em; /* Firefox */
+        -webkit-column-width: 24em; /* webkit, Safari, Chrome */
+        column-width: 24em;
 
 
         /*remove standard list and bullet formatting from ul*/
@@ -501,7 +505,7 @@ body {margin:0;}
 
 #aboutUs{
     font-family: 'Raleway', Arial, sans-serif;
-    padding: 3vw 30px;
+    padding: 3vw 5%;
 }
 
 .clientsTitle{
@@ -531,7 +535,7 @@ body {margin:0;}
 
 #contactUs{
     background: $colorDark;
-    padding: 15px 30px;
+    padding: 15px 5%;
     color: white;
 
     h1{

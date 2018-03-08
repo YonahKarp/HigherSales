@@ -93,7 +93,7 @@ $(document).ready(function(){
  
         responsive : [
             
-        ],
+        ]
     });
 
 

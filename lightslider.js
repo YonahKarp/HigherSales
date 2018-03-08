@@ -192,6 +192,19 @@
                             $slide.find('.lSAction').hide();
                         }
                     }
+                    $slide.find('.lSAction a').on('click', function (e) {
+                        if (e.preventDefault) {
+                            e.preventDefault();
+                        } else {
+                            e.returnValue = false;
+                        }
+                        if ($(this).attr('class') === 'lSPrev') {
+                            $el.goToPrevSlide();
+                        } else {
+                            $el.goToNextSlide();
+                        }
+                        return false;
+                    });
                 }
             },
             initialStyle: function () {
@@ -1041,7 +1054,74 @@
             }, settings.speed);
             on = true;
         };
+        $el.play = function () {
+            $el.goToNextSlide();
+            settings.auto = true;
+            plugin.auto();
+        };
+        $el.pause = function () {
+            settings.auto = false;
+            clearInterval(interval);
+        };
+        $el.refresh = function () {
+            refresh.init();
+        };
+        $el.getCurrentSlideCount = function () {
+            var sc = scene;
+            if (settings.loop) {
+                var ln = $slide.find('.lslide').length,
+                    cl = $el.find('.clone.left').length;
+                if (scene <= cl - 1) {
+                    sc = ln + (scene - cl);
+                } else if (scene >= (ln + cl)) {
+                    sc = scene - ln - cl;
+                } else {
+                    sc = scene - cl;
+                }
+            }
+            return sc + 1;
+        }; 
+        $el.getTotalSlideCount = function () {
+            return $slide.find('.lslide').length;
+        };
+        $el.goToSlide = function (s) {
+            if (settings.loop) {
+                scene = (s + $el.find('.clone.left').length - 1);
+            } else {
+                scene = s;
+            }
+            $el.mode(false);
+            if (settings.gallery === true) {
+                plugin.slideThumb();
+            }
+        };
+        $el.destroy = function () {
+            if ($el.lightSlider) {
+                $el.goToPrevSlide = function(){};
+                $el.goToNextSlide = function(){};
+                $el.mode = function(){};
+                $el.play = function(){};
+                $el.pause = function(){};
+                $el.refresh = function(){};
+                $el.getCurrentSlideCount = function(){};
+                $el.getTotalSlideCount = function(){};
+                $el.goToSlide = function(){}; 
+                $el.lightSlider = null;
+                refresh = {
+                    init : function(){}
+                };
+                $el.parent().parent().find('.lSAction, .lSPager').remove();
+                $el.removeClass('lightSlider lSFade lSSlide lsGrab lsGrabbing leftEnd right').removeAttr('style').unwrap().unwrap();
+                $el.children().removeAttr('style');
+                $children.removeClass('lslide active');
+                $el.find('.clone').remove();
+                $children = null;
+                interval = null;
+                on = false;
+                scene = 0;
+            }
 
+        };
         setTimeout(function () {
             settings.onSliderLoad.call(this, $el);
         }, 10);

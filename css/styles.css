@@ -92,7 +92,9 @@ body {
     width: 15%;
     position: absolute;
     left: 3%;
-    top: 30px; }
+    top: 30px;
+    background: white;
+    border-radius: 20%; }
   #header .links {
     height: 100px;
     margin-left: 20%; }
@@ -111,6 +113,7 @@ body {
     min-height: 220px;
     margin: 13% auto 0;
     display: none;
+    text-align: center;
     opacity: 0; }
     #header .slideContent.active {
       opacity: 1;
@@ -118,7 +121,8 @@ body {
       animation: fadeIn 1s ease-in-out;
       -webkit-animation: fadeIn 1s ease-in-out; }
     #header .slideContent > div {
-      display: inline-block; }
+      display: inline-block;
+      text-align: left; }
     #header .slideContent .question {
       width: 56%;
       padding: 8px 0 0 20px;
@@ -186,7 +190,8 @@ body {
         text-align: right;
         border-bottom: 1px grey solid; }
     #header .slideContent {
-      min-height: 400px; }
+      min-height: 400px;
+      text-align: unset; }
       #header .slideContent .question {
         width: 94%; } }
 
@@ -250,11 +255,11 @@ body {
       text-align: center; }
   #services .servicesList {
     margin-left: 20px;
-    -moz-column-width: 14em;
+    -moz-column-width: 24em;
     /* Firefox */
-    -webkit-column-width: 14em;
+    -webkit-column-width: 24em;
     /* webkit, Safari, Chrome */
-    column-width: 14em;
+    column-width: 24em;
     /*remove standard list and bullet formatting from ul*/
     /* correct webkit/chrome uneven margin on the first column*/ }
     #services .servicesList ul {
@@ -346,7 +351,7 @@ body {
 
 #aboutUs {
   font-family: 'Raleway', Arial, sans-serif;
-  padding: 3vw 30px; }
+  padding: 3vw 5%; }
 
 .clientsTitle {
   margin: 20px 0 0;
@@ -370,7 +375,7 @@ body {
 
 #contactUs {
   background: #1F74BC;
-  padding: 15px 30px;
+  padding: 15px 5%;
   color: white; }
   #contactUs h1 {
     margin: 0;
