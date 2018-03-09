@@ -139,7 +139,8 @@ body {
     text-align: center;
     font-family: 'Montserrat', sans-serif; }
     #header .brands img {
-      width: 150px; }
+      width: 30%;
+      max-width: 150px; }
   @media only screen and (max-width: 900px) {
     #header .slideContent h2 {
       font-size: 28pt; } }
@@ -249,7 +250,7 @@ body {
     width: calc(49% + 2px - 9vw); }
   #services .listContainer {
     width: calc(49% - 12px + 9vw); }
-    #services .listContainer h4 {
+    #services .listContainer h3 {
       margin: 0 0 15px 20px;
       color: #3FAFEF;
       text-align: center;

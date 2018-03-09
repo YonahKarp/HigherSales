@@ -182,7 +182,8 @@ body {margin:0;}
         font-family: 'Montserrat', sans-serif;
 
         img{
-            width: 150px;
+            width: 30%;
+            max-width: 150px;
         }
     }
 
@@ -350,7 +351,7 @@ body {margin:0;}
     .listContainer{
         width: calc(49% - 12px + 9vw) ;
 
-        h4{
+        h3{
             margin: 0 0 15px 20px;
             color: $colorPrimary;
             text-align: center;
@@ -359,7 +360,6 @@ body {margin:0;}
     }
 
     
-
     .servicesList{
         margin-left: 20px;
         -moz-column-width: 24em; /* Firefox */
