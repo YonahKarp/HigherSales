@@ -354,6 +354,7 @@ body {margin:0;}
             margin: 0 0 15px 20px;
             color: $colorPrimary;
             text-align: center;
+            padding-right: 16%; 
         }
     }
 
@@ -365,7 +366,7 @@ body {margin:0;}
         -webkit-column-width: 24em; /* webkit, Safari, Chrome */
         column-width: 24em;
 
-
+       
         /*remove standard list and bullet formatting from ul*/
         ul{
             margin: 0;

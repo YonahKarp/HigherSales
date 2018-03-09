@@ -252,7 +252,8 @@ body {
     #services .listContainer h4 {
       margin: 0 0 15px 20px;
       color: #3FAFEF;
-      text-align: center; }
+      text-align: center;
+      padding-right: 16%; }
   #services .servicesList {
     margin-left: 20px;
     -moz-column-width: 24em;
