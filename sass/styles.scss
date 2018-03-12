@@ -102,6 +102,7 @@ body {margin:0;}
 
     .logo{
         width: 15%;
+        min-width: 80px;
         position: absolute;
         left: 3%;
         top: 30px;
@@ -184,6 +185,8 @@ body {margin:0;}
         img{
             width: 30%;
             max-width: 150px;
+            vertical-align: middle;
+            margin: 0 0.5vw 0 2vw;
         }
     }
 
@@ -197,6 +200,7 @@ body {margin:0;}
             position: absolute;
             right: 20px;
             margin: 20px;
+            top: 3%;
             transition: right 1s ease-in-out;
             z-index: 20;
 
@@ -243,7 +247,7 @@ body {margin:0;}
                 background: rgba(25, 25,25, 0.9);
                 width: 70%;
                 height: 100%;
-                z-index: 11;
+                z-index: 111;
                 transition: ease-in-out right 1s;
 
                 li{
@@ -351,11 +355,9 @@ body {margin:0;}
     .listContainer{
         width: calc(49% - 12px + 9vw) ;
 
-        h3{
+        h2{
             margin: 0 0 15px 20px;
-            color: $colorPrimary;
-            text-align: center;
-            padding-right: 16%; 
+            color: $colorDark;
         }
     }
 
@@ -507,6 +509,10 @@ body {margin:0;}
 #aboutUs{
     font-family: 'Raleway', Arial, sans-serif;
     padding: 3vw 5%;
+
+    .colorTxt{
+        font-weight: bold;
+    }
 }
 
 .clientsTitle{

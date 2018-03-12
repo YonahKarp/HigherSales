@@ -90,6 +90,7 @@ body {
     overflow: hidden; }
   #header .logo {
     width: 15%;
+    min-width: 80px;
     position: absolute;
     left: 3%;
     top: 30px;
@@ -140,7 +141,9 @@ body {
     font-family: 'Montserrat', sans-serif; }
     #header .brands img {
       width: 30%;
-      max-width: 150px; }
+      max-width: 150px;
+      vertical-align: middle;
+      margin: 0 0.5vw 0 2vw; }
   @media only screen and (max-width: 900px) {
     #header .slideContent h2 {
       font-size: 28pt; } }
@@ -150,6 +153,7 @@ body {
       position: absolute;
       right: 20px;
       margin: 20px;
+      top: 3%;
       transition: right 1s ease-in-out;
       z-index: 20; }
       #header .menu > span {
@@ -182,7 +186,7 @@ body {
       background: rgba(25, 25, 25, 0.9);
       width: 70%;
       height: 100%;
-      z-index: 11;
+      z-index: 111;
       transition: ease-in-out right 1s; }
       #header .links ul li {
         display: block;
@@ -250,11 +254,9 @@ body {
     width: calc(49% + 2px - 9vw); }
   #services .listContainer {
     width: calc(49% - 12px + 9vw); }
-    #services .listContainer h3 {
+    #services .listContainer h2 {
       margin: 0 0 15px 20px;
-      color: #3FAFEF;
-      text-align: center;
-      padding-right: 16%; }
+      color: #1F74BC; }
   #services .servicesList {
     margin-left: 20px;
     -moz-column-width: 24em;
@@ -354,6 +356,8 @@ body {
 #aboutUs {
   font-family: 'Raleway', Arial, sans-serif;
   padding: 3vw 5%; }
+  #aboutUs .colorTxt {
+    font-weight: bold; }
 
 .clientsTitle {
   margin: 20px 0 0;
