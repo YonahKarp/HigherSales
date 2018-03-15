@@ -371,10 +371,16 @@ body {
 #clients {
   margin: 0 0 10px;
   height: 250px !important; }
+  #clients:not(.lightSlider) {
+    white-space: nowrap;
+    overflow: hidden; }
   #clients li {
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
+  #clients li:not(.lslide) {
+    display: inline-flex;
+    vertical-align: top; }
   #clients img {
     max-height: 250px;
     max-width: 200px; }

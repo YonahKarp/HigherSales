@@ -529,11 +529,23 @@ body {margin:0;}
 #clients{
     margin: 0 0 10px;
     height: 250px !important;
+    
+    &:not(.lightSlider){
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
     li{
         position: relative;
         top: 50%;
         transform: translateY(-50%);
     }
+
+    li:not(.lslide){
+        display: inline-flex;
+        vertical-align: top;
+    }
+
     img{
        max-height: 250px;
        max-width: 200px;
