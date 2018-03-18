@@ -374,13 +374,13 @@ body {
   #clients:not(.lightSlider) {
     white-space: nowrap;
     overflow: hidden; }
+    #clients:not(.lightSlider) li {
+      display: inline;
+      top: -25%; }
   #clients li {
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
-  #clients li:not(.lslide) {
-    display: inline-flex;
-    vertical-align: top; }
   #clients img {
     max-height: 250px;
     max-width: 200px; }
@@ -404,7 +404,7 @@ body {
     #contactUs .form .inputContainer {
       position: relative; }
     #contactUs .form input, #contactUs .form textarea, #contactUs .form select {
-      display: block;
+      display: inline;
       width: 90%;
       margin: 0 auto;
       text-indent: 15px;
@@ -425,8 +425,15 @@ body {
     #contactUs .form input[type=number]::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0; }
-    #contactUs .form input:invalid {
-      background-color: #960000; }
+    #contactUs .form .attention:invalid {
+      background-color: red; }
+    #contactUs .form input[required] ~ span, #contactUs .form textarea[required] ~ span {
+      display: none; }
+    #contactUs .form input[required]:invalid ~ span, #contactUs .form textarea[required]:invalid ~ span {
+      display: inline;
+      color: red;
+      padding-left: 10px;
+      vertical-align: top; }
     #contactUs .form textarea {
       resize: none;
       height: 70px; }

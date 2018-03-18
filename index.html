@@ -328,11 +328,15 @@
                 
 
         <div class="form">
-            <form action="https://formspree.io/Eli@ceAhead.com" method="POST">             
-                <input type="email" name="_replyto" placeholder="Email"/>
-                <input type="text" name="name" placeholder="Full Name" />
-                <input type="number" name="phone" placeholder="Phone" />                        
-                <textarea name="message" placeholder="Message"></textarea>
+            <form action="https://formspree.io/Eli@ceAhead.com" method="POST">
+                <div>          
+                    <input type="email" name="_replyto" placeholder="Email" required/><span>*</span>
+                </div>
+                <div>
+                    <input type="text" name="name" placeholder="Full Name" required /><span>*</span>
+                <div>
+                <input type="number" name="phone" placeholder="Phone" maxlength="20"/>                        
+                <textarea name="message" placeholder="Message" required></textarea><span>*</span>
                 <!-- <input type="hidden" name="_next" value="#" /> -->
                 <input type="hidden" name="_subject" value="I want to learn more about Higher Sales Consulting" />
                 <div class="btnContainer">

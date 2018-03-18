@@ -127,10 +127,15 @@ $(document).ready(function(){
                 height: "0px", 
                 width:"0px"});
                 
+                var form = document.forms[0];
                 
-                //document.forms[0].submit();
+                if(form.checkValidity())
+                    form.submit();
+                else{
+                    $('input:invalid, textarea:invalid').addClass("attention");
+                }
                 //message sent!
             }
             })
-        });   
+        });
 })
